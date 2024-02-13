@@ -1,6 +1,6 @@
 # Grocery Store Website
 
-This is a responsive e-commerce website for an online grocery store. The website is built using HTML, CSS & Bootstrap v5.3.
+The Grocery E-Commerce Website is designed to provide users with a seamless online shopping experience for grocery items. This project is a responsive e-commerce website for an online grocery store, featuring a landing page, about us page, products page, contact us page, and login/sign-up functionality.
 
 ## Table of Contents
 
@@ -20,8 +20,6 @@ This is a responsive e-commerce website for an online grocery store. The website
 - Bootstrap v5.3
 
 ## About
-
-The Grocery E-Commerce Website is designed to provide users with a seamless online shopping experience for grocery items. This project is a responsive e-commerce website for an online grocery store, featuring a landing page, about us page, products page, contact us page, and login/sign-up functionality.
 
 The Grocery E-Commerce Website provides a user-friendly interface for online grocery shopping. It includes the following pages:
 
