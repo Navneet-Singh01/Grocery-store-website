@@ -36,10 +36,12 @@ The Grocery E-Commerce Website provides a user-friendly interface for online gro
 ## Features
 
 - Responsive design for various screen sizes.
-- Navbar with a collapsible menu for easy navigation.
+- Navbar with a collapsible menu for easy navigation on small screens and quick links.
+- Varieties of products, offers and store sections.
+- Carousel slider for products and testimonials. 
 - About Us section with information about the company's mission and vision.
 - Contact Us page with a form for user inquiries.
-- Login/Sign-Up functionality for user authentication.
+- Login/Sign-Up form.
 - Blog section showcasing articles related to the grocery industry.
 - Footer with contact information and quick links.
 
