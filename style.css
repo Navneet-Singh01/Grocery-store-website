@@ -210,9 +210,13 @@ section {
 .navbar-brand {
   display: inline-block;
   width: 7rem;
+  min-width: 65px;
   margin-top: 0.1rem;
   scale: 1.5;
   margin-left: 1rem;
+}
+.navbar .navbar-collapse {
+  white-space: nowrap;
 }
 .header .navbar-nav .nav-link {
   color: var(--text-white);
@@ -635,6 +639,12 @@ section {
 .footer_wrapper .copyright-section a {
   color: var(--primary-text);
   font-weight: 400;
+}
+
+/* About page Styling */
+
+.about h4, h5 {
+  margin: 2rem 0;
 }
 
 /* Responsive styling */
