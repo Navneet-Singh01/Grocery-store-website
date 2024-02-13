@@ -277,6 +277,7 @@ section {
 .banner_section {
   background-color: var(--bg-color);
   min-height: 90vh;
+  margin-top: 0;
 }
 .banner_section .carousel-item {
   /* padding: 3rem 0; */
@@ -308,16 +309,11 @@ section {
 }
 .banner_section .carousel-caption p {
   max-width: 45%;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
   font-weight: 400;
 }
 .banner_section .carousel-indicators {
   bottom: -5rem;
-}
-.banner_section .carousel-indicators-buttons {
-  /* background-color: var(--bg-success-color);
-    border-radius: 5rem;
-    padding: 0 1rem; */
 }
 .banner_section .carousel-indicators button {
   background-color: var(--dark-color);
@@ -657,6 +653,10 @@ section {
 }
 
 @media (max-width: 991px) {
+  body,
+  html {
+    font-size: 8px;
+  }
   /* navbar */
 
   .header .navbar-nav {
@@ -670,7 +670,7 @@ section {
 @media (max-width: 767px) {
   body,
   html {
-    font-size: 8px;
+    font-size: 7px;
   }
   .section-subtitle {
     max-width: 80%;
@@ -688,7 +688,7 @@ section {
 
 @media (max-width: 590px) {
   body,html {
-    font-size: 7px;
+    font-size: 6px;
   }
 }
 
