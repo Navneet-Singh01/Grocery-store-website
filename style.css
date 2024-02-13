@@ -185,6 +185,7 @@ section {
   padding-top: 17rem;
   padding-bottom: 10rem;
   min-height: auto;
+  margin-top: 0;
 }
 
 /* specification for smaller screen >= 250px */

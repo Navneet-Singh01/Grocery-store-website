@@ -21,43 +21,50 @@
 
 <body>
     <!-- Navbar Section -->
-    <header id="full_nav" class="header">
-        <nav class="navbar navbar-expand-lg bg-success bg-gradient fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html"><img width="76" src="assets/grocery-logo_fb537a.svg" alt="Grocery-Logo"></a>
-                <div class="search_product d-flex">
-                    <form class="d-flex flex-grow-1 mx-5" role="search">
-                        <input class="form-control" type="search" placeholder="Search for Products..." aria-label="Search">
-                        <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    </form>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fa-solid fa-bars-staggered"></i></button>
+    <header class="full_nav sticky-top">
+        <div class="header">
+            <nav class="navbar navbar-expand-lg bg-success bg-gradient">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html"><img width="76" src="assets/grocery-logo_fb537a.svg"
+                            alt="Grocery-Logo"></a>
+                    <div class="search_product d-flex">
+                        <form class="d-flex flex-grow-1 mx-5" role="search">
+                            <input class="form-control" type="search" placeholder="Search for Products..."
+                                aria-label="Search">
+                            <button class="btn search-btn" type="submit"><i
+                                    class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <i class="fa-solid fa-bars-staggered"></i></button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="product.html">Product</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn nav-btn" href="#" role="button">Login/Signup</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn nav-btn" href="#" role="button">
+                                    <i class="fa-solid fa-cart-arrow-down me-2"></i>Cart</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="product.html">Product</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn nav-btn" href="#" role="button">Login/Signup</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn nav-btn" href="#" role="button">
-                                <i class="fa-solid fa-cart-arrow-down me-2"></i>Cart</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
 
     <!-- Banner section -->
