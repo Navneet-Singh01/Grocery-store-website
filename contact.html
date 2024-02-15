@@ -19,6 +19,7 @@
 </head>
 
 <body class="contact">
+
     <!-- Navbar Section -->
 
     <header class="full_nav sticky-top">
@@ -54,7 +55,7 @@
                                 <a class="nav-link active" href="contact.html">Contact Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link btn nav-btn" href="#" role="button">Login/Signup</a>
+                                <a class="nav-link btn nav-btn" href="#" role="button" data-bs-toggle="modal" data-bs-target="#logInModal">Login/Signup</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link btn nav-btn" href="#" role="button">
@@ -66,6 +67,48 @@
             </nav>
         </div>
     </header>
+
+    <!-- Login/Signup modal -->
+
+    <div class="login modal fade" id="logInModal" tabindex="-1" aria-labelledby="logInModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-4">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="logInModalLabel">Sing Up to Grocery</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <p class="sub-text px-3 mb-4">Get started today by entering just few details</p>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-floating mb-4">
+                            <input type="text" class="form-control" id="nameSignUpInput" placeholder="Name" required>
+                            <label for="nameSignUpInput">Full Name*</label>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <input type="email" class="form-control" id="emailSignUpInput" placeholder="name@example.com" required>
+                            <label for="emailSignUpInput">Email address*</label>
+                        </div>
+                        <p class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
+                            <label class="form-check-label form-text" for="flexCheckDefault">I agree to Grocery's Terms of Service, Privacy Policy and Content Policies.</label>
+                        </p>
+                        <div class="d-grid gap-2 mb-4">
+                            <button type="submit" class="btn btn-primary signup-btn">Create account</button>
+                        </div>
+                    </form>
+                    <div class="line-with-text">
+                        <span class="or-text">or</span>
+                    </div>
+                    <div class="d-grid mb-4">
+                        <button class="btn align-items-center signup-btn"><img class="mx-2" src="assets/24px.svg" width="20" alt="google-logo">Sign in with Google</button>
+                    </div>
+                </div>
+                <div class="modal-footer text-center">
+                    <p>Already have an account? <span>Log in</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Banner Section -->
 
@@ -128,7 +171,8 @@
         <div class="container px-5 px-lg-0">
             <div class="row">
                 <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
-                    <a class="navbar-brand" href="index.html"><img width="76" src="assets/grocery-logo_fb537a.svg" alt="logo"></a>
+                    <a class="navbar-brand" href="index.html"><img width="76" src="assets/grocery-logo_fb537a.svg"
+                            alt="logo"></a>
                     <p class="mb-4 ps-0 company_details">Organic marketplace, Rooted in nature delivered with care.</p>
                     <div class="contact-info">
                         <ul class="list-unstyled">
