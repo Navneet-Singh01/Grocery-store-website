@@ -211,6 +211,14 @@ section {
     flex: 0 0 auto;
     width: 50%;
   }
+  .col-ssm-4 {
+    flex: 0 0 auto;
+    width: 33.33%;
+  }
+  .col-ssm-3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
 }
 
 /* navbar */
