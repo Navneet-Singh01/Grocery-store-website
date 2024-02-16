@@ -278,6 +278,7 @@ section {
 .search_product input {
   font-size: 1.4rem;
   color: white;
+  font-family: var(--secondary-font);
 }
 .search_product input:focus {
   outline: none;
