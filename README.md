@@ -2,6 +2,10 @@
 
 The Grocery E-Commerce Website is designed to provide users with a seamless online shopping experience for grocery items. This project is a responsive e-commerce website for an online grocery store, featuring a landing page, about us page, products page, contact us page, and login/sign-up functionality.
 
+## Demo
+
+[Link to live demo](https://navneet-singh01.github.io/Grocery-store-website/)
+
 ## Table of Contents
 
 - [Technologies Used](#technologies-used)
