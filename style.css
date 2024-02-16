@@ -668,15 +668,19 @@ section {
   color: var(--bs-secondary-color);
   font-size: 1.4rem;
 }
-.login .form-control {
+/* Add styling for contact form */
+.login .form-control , .contact_section .form-control {
   height: 6rem;
   font-size: 2rem;
+  font-family: var(--secondary-font);
 }
-.login label {
+/* Add styling for contact form */
+.login label , .contact_section label {
   font-size: 1.4rem;
   font-weight: 100;
   font-family: var(--secondary-font);
 }
+/* or line */
 .line-with-text {
   display: flex;
   align-items: center;
@@ -694,6 +698,7 @@ section {
   color: #555;
   font-size: 14px;
 }
+
 .login .modal-footer {
   justify-content: flex-start;
 }
@@ -704,6 +709,12 @@ section {
 .login .form-check-input,
 .login .form-check-label {
   cursor: pointer;
+}
+/* contact page form styling */
+.contact_section .form-select {
+  height: 6rem;
+  font-size: 1.4rem;
+  font-family: var(--secondary-font);
 }
 
 /* About page Styling */
