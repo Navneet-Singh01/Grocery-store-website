@@ -1,0 +1,1133 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grocery</title>
+
+    <!-- Bootstrap 5.3 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Font Awesome 6.5.1 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="product">
+    <!-- Navbar Section -->
+    <header class="full_nav sticky-top">
+        <div class="header">
+            <nav class="navbar navbar-expand-lg bg-success bg-gradient">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html"><img width="76" src="assets/grocery-logo_fb537a.svg"
+                            alt="Grocery-Logo"></a>
+                    <div class="search_product d-flex">
+                        <form class="d-flex flex-grow-1 mx-5" role="search">
+                            <input class="form-control" type="search" placeholder="Search for Products..."
+                                aria-label="Search">
+                            <button class="btn search-btn" type="submit"><i
+                                    class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <i class="fa-solid fa-bars-staggered"></i></button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="product.html">Product</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn nav-btn" href="#" role="button" data-bs-toggle="modal"
+                                    data-bs-target="#logInModal">Login/Signup</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn nav-btn" href="#" role="button">
+                                    <i class="fa-solid fa-cart-arrow-down me-2"></i>Cart</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Login/Signup modal -->
+
+    <div class="login modal fade" id="logInModal" tabindex="-1" aria-labelledby="logInModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-4">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="logInModalLabel">Sing Up to Grocery</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <p class="sub-text px-3 mb-4">Get started today by entering just few details</p>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-floating mb-4">
+                            <input type="text" class="form-control" id="nameSignUpInput" placeholder="Name" required>
+                            <label for="nameSignUpInput">Full Name*</label>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <input type="email" class="form-control" id="emailSignUpInput"
+                                placeholder="name@example.com" required>
+                            <label for="emailSignUpInput">Email address*</label>
+                        </div>
+                        <p class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
+                            <label class="form-check-label form-text" for="flexCheckDefault">I agree to Grocery's Terms
+                                of Service, Privacy Policy and Content Policies.</label>
+                        </p>
+                        <div class="d-grid gap-2 mb-4">
+                            <button type="submit" class="btn btn-primary signup-btn">Create account</button>
+                        </div>
+                    </form>
+                    <div class="line-with-text">
+                        <span class="or-text">or</span>
+                    </div>
+                    <div class="d-grid mb-4">
+                        <button class="btn align-items-center signup-btn"><img class="mx-2" src="assets/24px.svg"
+                                width="20" alt="google-logo">Sign in with Google</button>
+                    </div>
+                </div>
+                <div class="modal-footer text-center">
+                    <p>Already have an account? <span>Log in</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- scroll list-->
+    <section class="landing_product_section mt-0">
+        <div class="container-fluid">
+            <div class="row">
+                <aside class="col-2">
+                    <div id="simple-list-example"
+                        class="aside-list d-flex flex-column simple-list-example-scrollspy text-start">
+                        <a class="p-4 rounded section-subtitle" href="#">All Categories</a>
+                        <a class="p-4 rounded section-subtitle" href="#simple-list-item-1">Fruits</a>
+                        <a class="p-4 rounded section-subtitle" href="#simple-list-item-2">Vegitables</a>
+                        <a class="p-4 rounded section-subtitle" href="#simple-list-item-3">Grocery</a>
+                        <a class="p-4 rounded section-subtitle" href="#simple-list-item-4">Masala & Spices</a>
+                        <a class="p-4 rounded section-subtitle" href="#simple-list-item-5">Dairy</a>
+                    </div>
+                </aside>
+                <div class="col-10 py-4">
+                    <div data-bs-spy="scroll" data-bs-target="#simple-list-example" data-bs-offset="0"
+                        data-bs-smooth-scroll="true" class="product-main-content" tabindex="0">
+                        <h2 id="simple-list-item-1" class="section-title">Fruits</h2>
+                        <div class="row pe-4">
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/kinnow.avif" class="img-fluid" alt="kinnow" />
+                                    </div>
+                                    <h5 class="my-2">kinnow : 500 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹26</span>
+                                            <span class="original-price">₹33</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/grapes.avif" class="img-fluid" alt="Grapes" />
+                                    </div>
+                                    <h5 class="my-2">Grapes : 500 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹54</span>
+                                            <span class="original-price">₹69</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/guava.avif" class="img-fluid" alt="Guava" />
+                                    </div>
+                                    <h5 class="my-2">Guava : 500 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹54</span>
+                                            <span class="original-price">₹68</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/papaya.avif" class="img-fluid" alt="papaya" />
+                                    </div>
+                                    <h5 class="my-2">Papaya 1 piece : 800 g - 1.4 kg</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹61</span>
+                                            <span class="original-price">₹81</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/anar.avif" class="img-fluid" alt="Anaar" />
+                                    </div>
+                                    <h5 class="my-2">Pomegranate (Anaar) : 1 kg</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹143</span>
+                                            <span class="original-price">₹198</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/shimla apples.avif" class="img-fluid" alt="apples" />
+                                    </div>
+                                    <h5 class="my-2">Shimla Apples : 500 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹137</span>
+                                            <span class="original-price">₹180</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/fruits/f1.webp" class="img-fluid" alt="Blueberry" />
+                                    </div>
+                                    <h5 class="my-2">Blueberry : 125 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹283</span>
+                                            <span class="original-price">₹388</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/fruits/f2.webp" class="img-fluid" alt="Dragon Fruit" />
+                                    </div>
+                                    <h5 class="my-2">Dragon Fruit 1 pc : 250 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹71</span>
+                                            <span class="original-price">₹98</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/fruits/f3.webp" class="img-fluid" alt="Anaar" />
+                                    </div>
+                                    <h5 class="my-2">Pomegranate : 1 kg</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹174</span>
+                                            <span class="original-price">₹248</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/fruits/f4.webp" class="img-fluid" alt="Banana" />
+                                    </div>
+                                    <h5 class="my-2">Banana : 500 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹28</span>
+                                            <span class="original-price">₹55</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/fruits/f5.webp" class="img-fluid" alt="Coconut" />
+                                    </div>
+                                    <h5 class="my-2">Coconut 1 pc : 450 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹26</span>
+                                            <span class="original-price">₹48</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/fruits/f6.webp" class="img-fluid" alt="papaya" />
+                                    </div>
+                                    <h5 class="my-2">Papaya Small 1 pc : 500 g - 800 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹40</span>
+                                            <span class="original-price">₹55</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 text-center mt-4">
+                                <a href="#" class="btn main-btn">View More</a>
+                            </div>
+                        </div>
+                        <h2 id="simple-list-item-2" class="section-title">Vegitables</h2>
+                        <div class="row pe-4">
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/fresho-cauliflower.webp" class="img-fluid" alt="Cauliflower" />
+                                    </div>
+                                    <h5 class="my-2">Cauliflower : 500 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹18.5</span>
+                                            <span class="original-price">₹28</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/fresho-potato-new-crop.webp" class="img-fluid" alt="Potato" />
+                                    </div>
+                                    <h5 class="my-2">Potato : 2 kg</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹35.7</span>
+                                            <span class="original-price">₹65</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/fresho-beans-haricot.webp" class="img-fluid" alt="Beans-Haricot" />
+                                    </div>
+                                    <h5 class="my-2">Beans-Haricot : 250 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹19.5</span>
+                                            <span class="original-price">₹45.89</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/fresho-coriander-leaves.webp" class="img-fluid" alt="Coriander" />
+                                    </div>
+                                    <h5 class="my-2">Coriander Leaves : 1 kg</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹45</span>
+                                            <span class="original-price">₹87</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/fresho-tomato-local.webp" class="img-fluid" alt="Tomato" />
+                                    </div>
+                                    <h5 class="my-2">Tomato : 1 kg</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹39.42</span>
+                                            <span class="original-price">₹54</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/fresho-carrot-orange.webp" class="img-fluid" alt="Carrot" />
+                                    </div>
+                                    <h5 class="my-2">Carrot : 500 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹14.5</span>
+                                            <span class="original-price">₹27</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/fresho-ladies-finger.webp" class="img-fluid" alt="Ladies Fingers" />
+                                    </div>
+                                    <h5 class="my-2">Ladies Fingers : 500 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹19</span>
+                                            <span class="original-price">₹57</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/fresho-capsicum-green.webp" class="img-fluid" alt="Capsicum" />
+                                    </div>
+                                    <h5 class="my-2">Capsicum : 500 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹30</span>
+                                            <span class="original-price">₹73</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/fresho-tomato-local.webp" class="img-fluid" alt="Tomato" />
+                                    </div>
+                                    <h5 class="my-2">Tomato : 1 kg</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹39.42</span>
+                                            <span class="original-price">₹54</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/vegitables/v9.webp" class="img-fluid" alt="Beetroot" />
+                                    </div>
+                                    <h5 class="my-2">Beetroot : 250 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹15</span>
+                                            <span class="original-price">35</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/vegitables/v10.webp" class="img-fluid" alt="Cucumber" />
+                                    </div>
+                                    <h5 class="my-2">Cucumber : 250 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹10</span>
+                                            <span class="original-price">₹24</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/vegitables/v11.webp" class="img-fluid" alt="Brinjal" />
+                                    </div>
+                                    <h5 class="my-2">Brinjal : 500 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹14</span>
+                                            <span class="original-price">₹37</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 text-center mt-4">
+                                <a href="#" class="btn main-btn">View More</a>
+                            </div>
+                        </div>
+                        <h2 id="simple-list-item-3" class="section-title">Grocery</h2>
+                        <div class="row pe-4">
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/grocery/d1.jpg" class="img-fluid" alt="Dal" />
+                                    </div>
+                                    <h5 class="my-2">Chana Dal : 500 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹55</span>
+                                            <span class="original-price">₹68</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/grocery/d2.jpg" class="img-fluid" alt="Dal" />
+                                    </div>
+                                    <h5 class="my-2">Moong Dal : 1 Kg</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹150</span>
+                                            <span class="original-price">₹192</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/grocery/d3.jpg" class="img-fluid" alt="Dal" />
+                                    </div>
+                                    <h5 class="my-2">Tur Dal Latur : 1 kg</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹190</span>
+                                            <span class="original-price">₹267</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/grocery/d4.jpg" class="img-fluid" alt="Dal" />
+                                    </div>
+                                    <h5 class="my-2">Udid Dal: 1Kg</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹160</span>
+                                            <span class="original-price">₹237</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/grocery/p1.jpg" class="img-fluid" alt="Pulses" />
+                                    </div>
+                                    <h5 class="my-2">Rajma White : 500 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹99</span>
+                                            <span class="original-price">₹134</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/grocery/p2.jpg" class="img-fluid" alt="Pulses" />
+                                    </div>
+                                    <h5 class="my-2">Mini Soya Chunks : 200 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹26</span>
+                                            <span class="original-price">₹47</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/grocery/p3.jpg" class="img-fluid" alt="Pulses" />
+                                    </div>
+                                    <h5 class="my-2">Desi Kabuli Chana : 1 Kg</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹261</span>
+                                            <span class="original-price">₹387</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/grocery/p4.jpg" class="img-fluid" alt="Pulses" />
+                                    </div>
+                                    <h5 class="my-2">Moong Whole : 1 kg</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹156</span>
+                                            <span class="original-price">₹273</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/grocery/o1.jpg" class="img-fluid" alt="Oil" />
+                                    </div>
+                                    <h5 class="my-2">Refined Sunflower Oil : 1 L</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹120</span>
+                                            <span class="original-price">₹154</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/grocery/o2.jpg" class="img-fluid" alt="Oil" />
+                                    </div>
+                                    <h5 class="my-2">Refined Sunflower Oil : 15 L</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹1780</span>
+                                            <span class="original-price">₹2125</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/grocery/o3.jpg" class="img-fluid" alt="Oil" />
+                                    </div>
+                                    <h5 class="my-2">Kachi Ghani Mustard Oil : 1 L</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹144</span>
+                                            <span class="original-price">₹155</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/grocery/r1.jpg" class="img-fluid" alt="Rice" />
+                                    </div>
+                                    <h5 class="my-2">Basmati Rice : 5 kg</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹479</span>
+                                            <span class="original-price">₹603</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 text-center mt-4">
+                                <a href="#" class="btn main-btn">View More</a>
+                            </div>
+                        </div>
+                        <h2 id="simple-list-item-4" class="section-title">Masala & Spices</h2>
+                        <div class="row pe-4">
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/grocery/s1.jpg" class="img-fluid" alt="Spice" />
+                                    </div>
+                                    <h5 class="my-2">Jeera : 200 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹129</span>
+                                            <span class="original-price">₹169</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/grocery/s2.jpg" class="img-fluid" alt="Spices" />
+                                    </div>
+                                    <h5 class="my-2">Black Pepper : 100 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹100</span>
+                                            <span class="original-price">₹165</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/grocery/s3.jpg" class="img-fluid" alt="Spices" />
+                                    </div>
+                                    <h5 class="my-2">Dhaniya : 400 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹95</span>
+                                            <span class="original-price">₹155</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/grocery/s4.jpg" class="img-fluid" alt="Spices" />
+                                    </div>
+                                    <h5 class="my-2">Methi : 100 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹15</span>
+                                            <span class="original-price">₹19</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/grocery/powder1.jpg" class="img-fluid" alt="Powder" />
+                                    </div>
+                                    <h5 class="my-2">Chilli Powder : 500 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹180</span>
+                                            <span class="original-price">₹354</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/grocery/powder2.jpg" class="img-fluid" alt="Powder" />
+                                    </div>
+                                    <h5 class="my-2">Turmeric Powder : 500 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹90</span>
+                                            <span class="original-price">₹100</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/grocery/powder3.jpg" class="img-fluid" alt="Powder" />
+                                    </div>
+                                    <h5 class="my-2">Coriander Powder : 500 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹115</span>
+                                            <span class="original-price">₹237</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/grocery/m1.jpg" class="img-fluid" alt="Masala" />
+                                    </div>
+                                    <h5 class="my-2">Chaat Masala : 100 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹70</span>
+                                            <span class="original-price">₹85</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/grocery/m2.jpg" class="img-fluid" alt="Masala" />
+                                    </div>
+                                    <h5 class="my-2">Chicken Masala : 50 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹42</span>
+                                            <span class="original-price">₹54</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/grocery/s5.jpg" class="img-fluid" alt="Salt" />
+                                    </div>
+                                    <h5 class="my-2">Salt : 1 kg</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹24.5</span>
+                                            <span class="original-price">₹29</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/grocery/s6.jpg" class="img-fluid" alt="Sugar" />
+                                    </div>
+                                    <h5 class="my-2">Sugar : 1 kg</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹49</span>
+                                            <span class="original-price">₹67</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/grocery/e1.jpg" class="img-fluid" alt="Elaichi" />
+                                    </div>
+                                    <h5 class="my-2">Green Elaichi : 50 gms</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹189</span>
+                                            <span class="original-price">₹245</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 text-center mt-4">
+                                <a href="#" class="btn main-btn">View More</a>
+                            </div>
+                        </div>
+                        <h2 id="simple-list-item-5" class="section-title">Dairy</h2>
+                        <div class="row pe-4">
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/grocery/g1.jpg" class="img-fluid" alt="Ghee" />
+                                    </div>
+                                    <h5 class="my-2">Cow Ghee : 1 L</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹689</span>
+                                            <span class="original-price">₹739</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/dairy/d2.jpg" class="img-fluid" alt="Butter" />
+                                    </div>
+                                    <h5 class="my-2">Pasteurized Butter : 500 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹265</span>
+                                            <span class="original-price">₹275</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/dairy/d3.jpg" class="img-fluid" alt="Butter" />
+                                    </div>
+                                    <h5 class="my-2">Garlic & Herbs Butter : 100 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹57</span>
+                                            <span class="original-price">₹60</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/dairy/d4.jpg" class="img-fluid" alt="Butter" />
+                                    </div>
+                                    <h5 class="my-2">Butter Pack : 100 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹63</span>
+                                            <span class="original-price">₹67</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/dairy/d5.jpg" class="img-fluid" alt="Milk" />
+                                    </div>
+                                    <h5 class="my-2">Milk : 1 L</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹72</span>
+                                            <span class="original-price">₹74</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/dairy/d6.jpg" class="img-fluid" alt="Milk" />
+                                    </div>
+                                    <h5 class="my-2">Milk : 1 L</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹77</span>
+                                            <span class="original-price">₹80</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/dairy/d7.jpg" class="img-fluid" alt="Cheese" />
+                                    </div>
+                                    <h5 class="my-2">Processed Cheese Cubes : 500 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹296</span>
+                                            <span class="original-price">₹315</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/fresho-capsicum-green.webp" class="img-fluid" alt="Cheese" />
+                                    </div>
+                                    <h5 class="my-2">Cheese Slices : 750 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹30</span>
+                                            <span class="original-price">₹73</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/dairy/d9.jpg" class="img-fluid" alt="Cheese" />
+                                    </div>
+                                    <h5 class="my-2">Cheese Slice  28 Slices : 476 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹242</span>
+                                            <span class="original-price">₹454</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/dairy/d10.jpg" class="img-fluid" alt="Cheese" />
+                                    </div>
+                                    <h5 class="my-2">Pizza Cheese Frozen : 1 kg</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹500</span>
+                                            <span class="original-price">₹540</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/dairy/d11.jpg" class="img-fluid" alt="Lassi" />
+                                    </div>
+                                    <h5 class="my-2">Lassi Rose Flavour : 200 ml</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹18</span>
+                                            <span class="original-price">₹20</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-ssm-4 mb-4">
+                                <div class="card product-card">
+                                    <div class="product-img">
+                                        <img src="assets/products/dairy/d12.jpg" class="img-fluid" alt="Shrikhand" />
+                                    </div>
+                                    <h5 class="my-2">Shrikhand Badam Pista : 500 g</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="rate d-flex flex-column">
+                                            <span class="net-price">₹125</span>
+                                            <span class="original-price">₹130</span>
+                                        </div>
+                                        <button class="btn nav-btn">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 text-center mt-4">
+                                <a href="#" class="btn main-btn">View More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer section -->
+
+    <section class="footer_wrapper mt-3 mt-md-0">
+        <div class="container px-5 px-lg-0">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
+                    <a class="navbar-brand" href="index.html"><img width="76" src="assets/grocery-logo_fb537a.svg"
+                            alt="logo"></a>
+                    <p class="mb-4 ps-0 company_details">Organic marketplace, Rooted in nature delivered with care.</p>
+                    <div class="contact-info">
+                        <ul class="list-unstyled">
+                            <li><a href="#"><i class="fa fa-home me-3"></i> Place, City, State, Country</a></li>
+                            <li><a href="#"><i class="fa fa-phone me-3"></i>+91 2222 3333</a></li>
+                            <li><a href="#"><i class="fa fa-envelope me-3"></i>info@example.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
+                    <h5>Customer Support</h5>
+                    <ul class="link-widget p-0">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Product Returns</a></li>
+                        <li><a href="#">Wholesale Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
+                    <h5>Quick Links</h5>
+                    <ul class="link-widget p-0">
+                        <li><a href="product.html">Product</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Term Of Use</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
+                    <h5>Newsletter</h5>
+                    <div class="form-group mb-4">
+                        <input type="email" class="form-control bg-transparent" placeholder="Enter Your Email Here">
+                        <button type="submit" class="btn main-btn">Subscribe</button>
+                    </div>
+                    <h5>Stay Connected</h5>
+                    <ul class="social-network d-flex align-items-center p-0">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright-section bg-success bg-gradient">
+            <p>Copyright <a href="index.html">© GROCERY.</a> All Rights Reserved</p>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

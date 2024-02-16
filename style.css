@@ -664,7 +664,7 @@ section {
 
 /* Login Signup form */
 
-.login .sub-text{
+.login .sub-text {
   color: var(--bs-secondary-color);
   font-size: 1.4rem;
 }
@@ -694,14 +694,15 @@ section {
   color: #555;
   font-size: 14px;
 }
-.login .modal-footer{
+.login .modal-footer {
   justify-content: flex-start;
 }
-.login .modal-footer span{
+.login .modal-footer span {
   color: var(--anchor-color);
   cursor: pointer;
 }
-.login .form-check-input, .login .form-check-label {
+.login .form-check-input,
+.login .form-check-label {
   cursor: pointer;
 }
 
@@ -710,6 +711,33 @@ section {
 .about h4,
 h5 {
   margin: 2rem 0;
+}
+
+/* Product page Styling */
+
+.product aside {
+  border-right: 2px solid #ccc;
+  padding-right: 0;
+}
+.product aside a {
+  margin: 0;
+  max-width: 100%;
+  border-bottom: 2px solid #ccc;
+}
+.product aside a:hover {
+  background-color: #0f7404;
+  color: #e2f6de;
+}
+.product .aside-list {
+  position: sticky;
+  top: 8rem;
+  left: 0;
+}
+.product .section-title {
+  margin: 3rem 0;
+}
+.product .section-title:first-child {
+  margin-top: 0; 
 }
 
 /* Responsive styling */
