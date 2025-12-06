@@ -52,7 +52,7 @@ The Grocery E-Commerce Website provides a user-friendly interface for online gro
 
 ## Getting Started
 
-To run this project locally, follow these steps:
+To run this project locally, follow these steps :
 
 1. Clone the repository:
 
